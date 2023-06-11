@@ -134,3 +134,23 @@ a:hover {
 a:active {
   font-style: italic;
 }
+
+/* * resolving confilcts between selectors */
+
+/*
+#copyright {
+  color: red;
+}
+
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}
+
+footer p {
+  color: green;
+}
+ */
