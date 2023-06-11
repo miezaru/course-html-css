@@ -1,0 +1,10 @@
+node_modules
+.vscode
+teacher-final-version
+.browserslistrc
+.editorconfig
+.prettierrc.json
+.stylelintignore
+.stylelintrc.json
+gulpfile.js
+yarn.lock
