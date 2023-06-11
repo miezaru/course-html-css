@@ -38,7 +38,7 @@ h4 {
 p {
   font-size: 22px;
 
-  /* * Default line height: 1 */
+  /* * default line height: 1 */
   line-height: 1.5;
 }
 
@@ -85,3 +85,32 @@ aside {
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
 }
+
+/* * pseudo-classes */
+
+/* * :first-child - FIRST child of an element */
+
+/*
+li:first-child {
+  font-weight: 700;
+}
+
+li:last-child {
+  font-style: italic;
+}
+*/
+
+/* * nth-child(2 | 2n | odd | even) */
+
+/*
+li:nth-child(2) {
+  text-decoration: underline;
+}
+*/
+
+/* * descendant selector */
+
+/*
+article p:first-child {
+  color: red;
+} */
