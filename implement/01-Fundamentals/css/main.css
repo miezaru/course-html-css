@@ -114,3 +114,23 @@ li:nth-child(2) {
 article p:first-child {
   color: red;
 } */
+
+/* * styling links - LVHA */
+a:link,
+a:visited {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: 600;
+  color: #7fffd4;
+
+  /* text-decoration: underline dotted #7fffd4; */
+
+  /* text-decoration: underline wavy #7fffd4; */
+}
+
+a:active {
+  font-style: italic;
+}
