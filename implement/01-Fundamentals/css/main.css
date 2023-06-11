@@ -10,6 +10,11 @@ body {
   border-top: 10px solid #1098ad;
 }
 
+.wrapper {
+  width: 700px;
+  margin: 0 auto;
+}
+
 /* * combining selectors */
 h1,
 h2,
@@ -102,13 +107,21 @@ article header p {
 }
 
 .main-header {
+  height: 80px;
+
   /* padding: 20px; */
   padding: 20px 40px;
   margin-bottom: 60px;
   background-color: #f7f7f7;
 }
 
+.post-img {
+  width: 100%;
+  height: auto;
+}
+
 aside {
+  width: 500px;
   padding: 50px 0;
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
