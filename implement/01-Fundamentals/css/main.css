@@ -72,19 +72,66 @@ article {
   margin-bottom: 60px;
 }
 
+/* * class selector */
+.main-header {
+  height: 80px;
+
+  /* padding: 20px; */
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  background-color: #f7f7f7;
+}
+
+/* * no vertical space created by using margin and padding on online elements */
+nav a:link,
+nav a:visited {
+  /* * render inline level elements like a block level elements */
+  display: block;
+
+  /* * right way to add paddings and margins w/o destroying layout using display: block */
+  display: inline-block;
+
+  /* * some space created, but only inside elements, no new space created around elements (when this elements are inline) */
+
+  margin-top: 10px;
+  margin-right: 30px;
+
+  /* padding: 20px; */
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
 .post-header {
   margin-bottom: 40px;
 }
 
-/*
-footer p {
-  font-size: 16px;
-} */
+.post-img {
+  width: 100%;
+  height: auto;
 
-/*
-article header p {
-  font-style: italic;
-} */
+  /* * images are inline-block elements de-facto, inline de-jure */
+
+  /* margin: 100px; */
+}
+
+aside {
+  width: 500px;
+  padding: 50px 0;
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.related {
+  list-style: none;
+}
 
 /* * id selector - each id can used once */
 #author {
@@ -96,37 +143,15 @@ article header p {
   font-size: 16px;
 }
 
-/* * class selector */
-.related-author {
-  font-size: 18px;
-  font-weight: 600;
-}
+/*
+footer p {
+  font-size: 16px;
+} */
 
-.related {
-  list-style: none;
-}
-
-.main-header {
-  height: 80px;
-
-  /* padding: 20px; */
-  padding: 20px 40px;
-  margin-bottom: 60px;
-  background-color: #f7f7f7;
-}
-
-.post-img {
-  width: 100%;
-  height: auto;
-}
-
-aside {
-  width: 500px;
-  padding: 50px 0;
-  background-color: #f7f7f7;
-  border-top: 5px solid #1098ad;
-  border-bottom: 5px solid #1098ad;
-}
+/*
+article header p {
+  font-style: italic;
+} */
 
 /* * pseudo-classes */
 
