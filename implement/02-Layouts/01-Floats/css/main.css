@@ -10,7 +10,7 @@ body {
 }
 
 .wrapper {
-  width: 800px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -136,7 +136,7 @@ article {
 
 aside {
   width: 500px;
-  padding: 50px 0;
+  padding: 40px 0;
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
@@ -148,6 +148,8 @@ aside {
 }
 
 .related {
+  padding: 10px 40px;
+  margin-left: 0;
   list-style: none;
 }
 
@@ -164,7 +166,7 @@ button {
   cursor: pointer;
 }
 
-/* * FLOATS LAYOUT */
+/* * FLOATS LAYOUT - outdated method for building layouts */
 
 .author-img {
   float: left;
@@ -172,14 +174,14 @@ button {
 }
 
 .author {
-  /* * after we floated this image too, padding and margins aplies wright */
+  /* -- after we floated this image too, padding and margins aplies wright */
   float: left;
   margin-top: 10px;
   margin-left: 20px;
 
   /* padding-left: 80px; */
 
-  /* * nothing change with small paddings and margins, because text start after image */
+  /* -- nothing change with small paddings and margins, because text start after image */
 
   /*
   padding-left: 10px;
@@ -192,4 +194,30 @@ h1 {
 
 nav {
   float: right;
+}
+
+/* -- clearing floats */
+.clear {
+  clear: both;
+}
+
+/* -- clearfix hack */
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+article {
+  float: left;
+  width: 825px;
+}
+
+aside {
+  float: right;
+  width: 300px;
+}
+
+footer {
+  clear: both;
 }
