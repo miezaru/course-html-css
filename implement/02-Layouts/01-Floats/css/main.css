@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -136,7 +137,7 @@ article {
 
 aside {
   width: 500px;
-  padding: 40px 0;
+  padding: 50px 40px;
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
@@ -148,7 +149,6 @@ aside {
 }
 
 .related {
-  padding: 10px 40px;
   margin-left: 0;
   list-style: none;
 }
