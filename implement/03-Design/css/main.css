@@ -39,7 +39,7 @@ body {
 
 header,
 section {
-  margin-bottom: 48px;
+  margin-bottom: 96px;
 }
 
 h2 {
@@ -76,7 +76,7 @@ h2 {
 }
 
 .btn--big:link {
-  padding: 16px 32px;
+  padding: 12px 32px;
   font-size: 18px;
 }
 
@@ -100,7 +100,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 80px;
-  margin-top: 48px;
+  margin-top: 64px;
 }
 
 .header-text-box {
@@ -110,7 +110,7 @@ header {
 }
 
 h1 {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   font-size: 44px;
   line-height: 1.1;
   letter-spacing: -1px;
@@ -130,7 +130,7 @@ img {
 .features-icon {
   width: 32px;
   height: 32px;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
   stroke: #087f5b;
 }
 
@@ -167,6 +167,11 @@ img {
   font-size: 18px;
   font-style: italic;
   line-height: 1.7;
+  color: #e6fcf5;
+}
+
+.testimonial-author {
+  color: #c3faeb;
 }
 
 /* CHAIRS */
@@ -184,7 +189,7 @@ img {
 }
 
 .chair-box {
-  padding: 24px;
+  padding: 32px;
 }
 
 h3 {
@@ -193,7 +198,7 @@ h3 {
 }
 
 .chair-details {
-  margin-bottom: 24px;
+  margin-bottom: 48px;
   list-style: none;
 }
 
@@ -201,7 +206,7 @@ h3 {
   display: flex;
   gap: 12px;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .chair-details li:last-child {
@@ -216,6 +221,7 @@ h3 {
 
 .chair-price {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   font-size: 20px;
 }
