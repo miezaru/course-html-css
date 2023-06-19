@@ -67,6 +67,29 @@ body {
   color: #555;
 }
 
+/* -- Reusable */
+
+.wrapper {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+/* -- Grid variations */
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 /* -- Headings */
 
 .title-h1 {
@@ -173,7 +196,7 @@ body {
   background-color: #cf711f;
 }
 
-/* -- Hero section */
+/* -- Section Hero  */
 
 .section-hero {
   padding: 4.8rem 0 9.6rem;
@@ -230,6 +253,12 @@ body {
 .delivered-text span {
   font-weight: 700;
   color: #cf711f;
+}
+
+/* -- Section How it Works */
+
+.section-how {
+  padding: 9.6rem 0;
 }
 
 /* -- Helpers */
