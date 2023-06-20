@@ -28,6 +28,9 @@
 #cf711f
 
 -- Accents:
+#51cf66
+#94d82d
+#ffd43b
 
 -- Greys:
 #333
@@ -38,9 +41,13 @@
 #fff
 
 --- Shadows
+box-shadow: inset 0 0 0 3px #fff;
+box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 
 --- Border-radius
 9px
+11px
+111px
 
 --- Spacing system
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 (px)
@@ -67,6 +74,10 @@ body {
   font-weight: 400;
   line-height: 1;
   color: #555;
+}
+
+strong {
+  font-weight: 500;
 }
 
 /* -- Reusable */
@@ -172,4 +183,14 @@ body {
 
   /* Trick to add border inside */
   box-shadow: inset 0 0 0 3px #fff;
+}
+
+/* -- Helpers */
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+.margin-top-big {
+  margin-top: 8rem !important;
 }
