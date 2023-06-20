@@ -1,170 +1,5 @@
 /* stylelint-disable selector-class-pattern */
 
-/*
-
---- Typography system
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 (px)
-
---- Font weights
-400
-500
-600
-700
-
---- Line heights
-1
-1.05
-1.6
-
---- Colors system
--- Primary:
-#e67e22
-
--- Tints:
-#fdf2e9
-
--- Shades:
-#cf711f
-
--- Accents:
-
--- Greys:
-#555
-#333
-
--- Other
-#fff
-
---- Shadows
-
---- Border-radius
-9px
-
---- Spacing system
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 (px)
-
-*/
-
-/* -- General styles */
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html {
-  /*
-  font-size: 10px
-  10px / 16px = 0.625 = 62.5%
-  Percentage of user`s browser font-size setting */
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Rubik", sans-serif;
-  font-weight: 400;
-  line-height: 1;
-  color: #555;
-}
-
-/* -- Reusable */
-
-.wrapper {
-  max-width: 120rem;
-  padding: 0 3.2rem;
-  margin: 0 auto;
-}
-
-/* -- Grid variations */
-
-.grid {
-  display: grid;
-  gap: 9.6rem;
-}
-
-.grid--2-cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid--3-cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-/* -- Headings */
-
-.title-h1,
-.title-h2,
-.title-h3 {
-  font-weight: 700;
-  color: #333;
-  letter-spacing: -0.5px;
-}
-
-.title-h1 {
-  margin-bottom: 3.2rem;
-  font-size: 5.2rem;
-  line-height: 1.05;
-}
-
-.title-h2 {
-  margin-bottom: 9.6rem;
-  font-size: 4.4rem;
-  line-height: 1.2;
-}
-
-.title-h3 {
-}
-
-.title-sub {
-  display: block;
-  margin-bottom: 1.6rem;
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #cf711f;
-  text-transform: uppercase;
-  letter-spacing: -0.75px;
-}
-
-/* -- Buttons */
-
-.btn:link,
-.btn:visited {
-  display: inline-block;
-  padding: 1.6rem 3.2rem;
-  font-size: 2rem;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 9px;
-
-  /* Put transition on original state (initial element phase) */
-  transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.btn--full:link,
-.btn--full:visited {
-  color: #fff;
-  background-color: #e67e22;
-}
-
-.btn--full:hover,
-.btn--full:active {
-  background-color: #cf711f;
-}
-
-.btn--outline:link,
-.btn--outline:visited {
-  color: #555;
-  background-color: #fff;
-}
-
-.btn--outline:hover,
-.btn--outline:active {
-  background-color: #fdf2e9;
-
-  /* Trick to add border inside */
-  box-shadow: inset 0 0 0 3px #fff;
-}
-
 /* -- Header */
 
 .header {
@@ -286,19 +121,59 @@ body {
 }
 
 .step-text-box {
+  /* -- I can center that element with adding styles for each of the text-box elements, but I prefer to use additional class for expanding grid */
+
+  /* align-self: center; */
 }
 
 .step-number {
+  margin-bottom: 1.2rem;
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
 }
 
 .step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
 }
 
 .step-img-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-img-box::after,
+.step-img-box::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  content: "";
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-img-box::after {
+  z-index: -1;
+  width: 50%;
+
+  /* -- Using padding-bottom instead of using height (not working as inspected), for making a box with a same/equal dimensions  */
+  padding-bottom: 50%;
+  background-color: #fae5d3;
+}
+
+.step-img-box::before {
+  z-index: -2;
+  width: 60%;
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
 }
 
 .step-img {
-  width: 50%;
+  width: 35%;
 }
 
 /* -- Helpers */
