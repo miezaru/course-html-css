@@ -30,8 +30,9 @@
 -- Accents:
 
 -- Greys:
-#555
 #333
+#555
+#999
 
 -- Other
 #fff
@@ -130,7 +131,7 @@ body {
   font-weight: 500;
   color: #cf711f;
   text-transform: uppercase;
-  letter-spacing: -0.75px;
+  letter-spacing: 0.75px;
 }
 
 /* -- Buttons */
