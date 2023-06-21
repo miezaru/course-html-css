@@ -286,28 +286,6 @@
   color: #e67e22;
 }
 
-.diets-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-  list-style: none;
-}
-
-.diet {
-  display: flex;
-  gap: 1.6rem;
-  align-items: center;
-  font-size: 1.8rem;
-}
-
-.diet-icon {
-  width: 3rem;
-  height: 3rem;
-
-  /* font-size: 3rem; */
-  color: #e67e22;
-}
-
 .all-recipes {
   font-size: 1.8rem;
   text-align: center;
@@ -369,4 +347,48 @@
 
 .gallery-img:hover {
   scale: 1.1;
+}
+
+/* -- Section Pricing */
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.plan-header {
+  margin-bottom: 4.8rem;
+  text-align: center;
+}
+
+.plan-name {
+  margin-bottom: 3.2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #cf711f;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+}
+
+.plan-price {
+  margin-bottom: 1.6rem;
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.plan-price span {
+  margin-right: 0.8rem;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.plan-sing-up {
+  margin-top: 4.8rem;
+  text-align: center;
 }
