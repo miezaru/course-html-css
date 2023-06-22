@@ -13,14 +13,6 @@
   background-color: #fdf2e9;
 }
 
-.logo-link {
-  transition: all 0.3s;
-}
-
-.logo {
-  height: 2.2rem;
-}
-
 /* -- Navigation */
 
 .main-nav-list {
@@ -547,4 +539,10 @@
     url("../img/eating.jpg");
   background-position: center;
   background-size: cover;
+}
+
+/* -- Footer */
+
+.footer {
+  padding: 9.6rem 0;
 }
