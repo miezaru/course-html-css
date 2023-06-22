@@ -12,6 +12,7 @@
 --- Line heights
 1
 1.05
+1.2
 1.6
 1.8
 
@@ -138,6 +139,7 @@ strong {
   gap: 1.6rem;
   align-items: center;
   font-size: 1.8rem;
+  line-height: 1.2;
 }
 
 .list-icon {
