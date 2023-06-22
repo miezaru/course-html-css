@@ -86,6 +86,8 @@ box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.06);
 }
 
 html {
+  overflow-x: hidden;
+
   /*
   font-size: 10px
   10px / 16px = 0.625 = 62.5%
@@ -94,6 +96,9 @@ html {
 }
 
 body {
+  overflow-x: hidden;
+
+  /* -- Only works if there is nothing absolutely positioned in relation to body */
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   line-height: 1;
