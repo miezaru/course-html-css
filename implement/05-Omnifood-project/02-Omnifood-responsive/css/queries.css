@@ -230,3 +230,49 @@
     margin-top: 2.4rem;
   }
 }
+
+/* -- 784/16 = 49em (Small tablets) */
+@media (width <= 49em) {
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .title-h2 {
+    margin-bottom: 4.8rem;
+  }
+
+  .featured-logos {
+    flex-flow: row wrap;
+    gap: 1.6rem;
+  }
+
+  .diets {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  .pricing-plan {
+    padding: 3.2rem;
+  }
+
+  .pricing-plan--complete::after {
+    top: 5%;
+    right: -13%;
+  }
+
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+}
