@@ -41,6 +41,7 @@
 #6f6f6f
 #999
 #aaa
+#767676
 
 -- Other
 #fff
@@ -151,6 +152,7 @@ strong {
 
 .logo-link:link {
   display: inline-block;
+  margin-right: 0;
   transition: all 0.3s;
 }
 
