@@ -15,6 +15,7 @@
 1
 1.05
 1.6
+1.8
 
 --- Colors system
 -- Primary:
@@ -39,6 +40,7 @@
 #555
 #6f6f6f
 #999
+#aaa
 
 -- Other
 #fff
@@ -51,6 +53,10 @@ rgba(230, 126, 34, 0.35)
 box-shadow: inset 0 0 0 3px #fff;
 box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+box-shadow: 0 0 0 0.8rem rgb(253, 242, 233, 0.5);
+box-shadow: 0 0 0 0.8rem rgba(230, 126, 34, 0.5);
+
 
 --- Border-radius
 9px
@@ -67,6 +73,16 @@ box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+*:focus {
+  outline: none;
+
+  /*
+  outline: 4px dotted #e67e22;
+  outline-offset: 0.8rem; */
+
+  box-shadow: 0 0 0 0.8rem rgba(230, 126, 34, 0.5);
 }
 
 html {
@@ -102,7 +118,7 @@ strong {
   color: #e67e22;
   text-decoration: none;
   border-bottom: 1px solid currentcolor;
-  transition: border-bottom 0.3s, color 0.3s;
+  transition: all 0.3s;
 }
 
 .link:hover,
@@ -207,17 +223,25 @@ strong {
 
 /* -- Buttons */
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
-  padding: 1.6rem 3.2rem;
+  font-family: inherit;
   font-size: 2rem;
   font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
+  border: none;
   border-radius: 9px;
 
   /* Put transition on original state (initial element phase) */
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition: all 0.3s;
+}
+
+.btn:link,
+.btn:visited {
+  padding: 1.6rem 3.2rem;
 }
 
 .btn--full:link,
@@ -243,6 +267,17 @@ strong {
 
   /* Trick to add border inside */
   box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  padding: 1.2rem;
+  color: #fdf2e9;
+  background-color: #45260a;
+}
+
+.btn--form:hover {
+  color: #555;
+  background-color: #fff;
 }
 
 /* -- Helpers */
