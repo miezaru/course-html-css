@@ -1,0 +1,637 @@
+/* -- Header */
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* Define height manually, for make header sticky in future */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  background-color: #fdf2e9;
+}
+
+/* -- Navigation */
+
+.main-nav-list {
+  display: flex;
+  gap: 4.8rem;
+  align-items: center;
+  list-style: none;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  color: #fff;
+  background-color: #e67e22;
+  border-radius: 9px;
+  transition: all 0.3s;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
+/* -- Mobile Navigation */
+
+.btn-mobile-nav {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.icon-mobile-nav {
+  width: 4.8rem;
+  height: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* -- Section Hero  */
+
+.section-hero {
+  padding: 4.8rem 0 9.6rem;
+  background-color: #fdf2e9;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9.6rem;
+  align-items: center;
+  max-width: 130rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.hero-description {
+  margin-bottom: 4.8rem;
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.delivered-meals {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.delivered-imgs {
+  display: flex;
+}
+
+.delivered-imgs img {
+  width: 4.8rem;
+  height: 4.8rem;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+  border-radius: 50%;
+}
+
+.delivered-imgs img:last-child {
+  margin-right: 0;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  font-weight: 700;
+  color: #cf711f;
+}
+
+/* -- Section How it Works */
+
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.step-text-box {
+  /* -- I can center that element with adding styles for each of the text-box elements, but I prefer to use additional class for expanding grid */
+
+  /* align-self: center; */
+}
+
+.step-number {
+  margin-bottom: 1.2rem;
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.step-img-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-img-box::after,
+.step-img-box::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  content: "";
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-img-box::after {
+  z-index: -1;
+  width: 50%;
+
+  /* -- Using padding-bottom instead of using height (not working as inspected), for making a box with a same/equal dimensions  */
+  padding-bottom: 50%;
+  background-color: #fae5d3;
+}
+
+.step-img-box::before {
+  z-index: -2;
+  width: 60%;
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+}
+
+.step-img {
+  width: 35%;
+}
+
+/* -- Section Featured-In */
+
+.section-featured {
+  padding: 4.8rem 0 3.2rem;
+}
+
+.title-featured {
+  margin-bottom: 2.4rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #999;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+}
+
+.featured-logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.featured-logo {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 0.5;
+}
+
+/* -- Section Meals */
+
+.section-meals {
+  padding: 9.6rem 0;
+}
+
+.meal {
+  overflow: hidden;
+  border-radius: 11px;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  transition: all 0.4s;
+}
+
+.meal:hover {
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+  transform: translateY(-1.2rem);
+}
+
+.meal-content {
+  padding: 3.2rem 4.8rem 4.8rem;
+}
+
+.meal-tags {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 111px;
+  column-rule: #333;
+}
+
+.tag--vegetarian {
+  background-color: #51cf66;
+}
+
+.tag--vegan {
+  background-color: #94d82d;
+}
+
+.tag--paleo {
+  background-color: #ffd43b;
+}
+
+.meal-img {
+  width: 100%;
+}
+
+.meal-name {
+  margin-bottom: 3.2rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.meal-attributes {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+}
+
+.meal-attribute {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.meal-icon {
+  /*
+  width: 2.4rem;
+  height: 2.4rem; */
+  font-size: 2.4rem;
+  color: #e67e22;
+}
+
+.all-recipes {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* -- Section Testimonials */
+
+.section-testimonials {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+  background-color: #fdf2e9;
+}
+
+.testimonials-wrapper {
+  padding: 9.6rem 6.4rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  margin-bottom: 1.2rem;
+  border-radius: 50%;
+}
+
+.testimonial-text {
+  margin-bottom: 1.6rem;
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-img:hover {
+  scale: 1.1;
+}
+
+/* -- Section Pricing */
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.pricing-plan {
+  width: 75%;
+  border-radius: 11px;
+}
+
+.pricing-plan--starter {
+  justify-self: end;
+  padding: 4.6rem;
+  border: 2px solid #fdf2e9;
+}
+
+.pricing-plan--complete {
+  position: relative;
+  padding: 4.8rem;
+  overflow: hidden;
+  background-color: #fdf2e9;
+}
+
+.pricing-plan--complete::after {
+  position: absolute;
+  top: 5.5%;
+  right: -12%;
+  padding: 0.8rem 4.8rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  content: "Best value";
+  background-color: #ffd43b;
+  rotate: 45deg;
+}
+
+.plan-header {
+  margin-bottom: 4.8rem;
+  text-align: center;
+}
+
+.plan-name {
+  margin-bottom: 3.2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #cf711f;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+}
+
+.plan-price {
+  margin-bottom: 1.6rem;
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.plan-price span {
+  margin-right: 0.8rem;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.plan-sing-up {
+  margin-top: 4.8rem;
+  text-align: center;
+}
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* -- Features */
+
+.feature-icon {
+  /* ionicons using default behavior of box-sizing, keep it at mind */
+
+  width: 3.2rem;
+  height: 3.2rem;
+  padding: 1.6rem;
+  margin-bottom: 3.2rem;
+  color: #e67e22;
+  background-color: #fdf2e9;
+  border-radius: 50%;
+}
+
+.feature-title {
+  margin-bottom: 1.6rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/* -- Section Pricing */
+
+.section-cta {
+  padding: 4.8rem 0 12.8rem;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  overflow: hidden;
+  background-color: #e67e22;
+
+  /* background-image: linear-gradient(45deg, #eb984e, #e67e22); */
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  border-radius: 11px;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgb(253, 242, 233, 0.5);
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem;
+  color: #45260a;
+}
+
+.cta .title-h2 {
+  margin-bottom: 3.2rem;
+
+  /* color: #45260a; */
+  color: inherit;
+}
+
+.cta-text {
+  margin-bottom: 4.8rem;
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 2.4rem;
+  column-gap: 3.2rem;
+}
+
+.cta-form label {
+  display: block;
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-family: inherit;
+  font-size: 1.8rem;
+  color: inherit;
+  background-color: #fdf2e9;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta-form button {
+  align-self: end;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 152, 78, 0.35),
+      rgba(230, 126, 34, 0.35)
+    ),
+    url("../img/eating.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+/* -- Footer */
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  grid-template-columns: repeat(2, 1.5fr) repeat(3, 1fr);
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo:link {
+  align-self: flex-start;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 2.4rem;
+  list-style: none;
+}
+
+.social-icon {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.copyright {
+  margin-top: auto;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+}
+
+.footer-title {
+  margin-bottom: 4rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.contacts {
+  font-size: 1.6rem;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  list-style: none;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  display: block;
+  font-size: 1.6rem;
+  color: #767676;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+}

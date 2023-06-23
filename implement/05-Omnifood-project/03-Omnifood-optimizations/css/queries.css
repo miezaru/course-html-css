@@ -1,0 +1,490 @@
+/* --- All media queries applied, but the last one is more specific, because of "cascade". Using breakpoints: */
+
+/* -- BAD -  based on popular devices */
+
+/* -- GOOD - based on screen width ranges */
+
+/* -- PERFECT - when design breaks down */
+
+/* --- rem and em do NOT depend on html font-size in media-queries. Instead, 1rem = 1em = 16px */
+
+/* -- 1344/16 = 84em (Small desktops)  */
+@media (width <= 84em) {
+  /* -- General */
+
+  .title-h1 {
+    font-size: 4.4rem;
+  }
+
+  /* -- Section Hero */
+  .hero {
+    max-width: 120rem;
+  }
+
+  /* -- Section Testimonials */
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial {
+    padding: 2.4rem;
+    border: 4px solid #fae5d3;
+    border-radius: 9px;
+    box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.06);
+  }
+}
+
+/* -- 1200/16 = 75em (Landscape tablets) */
+@media (width <= 75em) {
+  /* -- General */
+
+  /* -- 9/16 = 56.25% */
+  html {
+    font-size: 56.25%;
+  }
+
+  .title-h2 {
+    font-size: 3.6rem;
+  }
+
+  .title-h3 {
+    font-size: 2.4rem;
+  }
+
+  .grid {
+    gap: 6.4rem 4.8rem;
+  }
+
+  /* -- Header */
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  /* -- Section Hero */
+
+  .hero {
+    gap: 4.8rem;
+  }
+
+  /* -- Section Testimonials */
+
+  .testimonials-wrapper {
+    padding: 9.6rem 3.2rem;
+  }
+
+  /* -- Section Pricing */
+
+  .pricing-plan {
+    width: 80%;
+  }
+}
+
+/* -- 992/16 = 62em (Tablets) */
+
+@media (width <= 62em) {
+  /* -- Section Pricing */
+
+  .pricing-plan {
+    width: 90%;
+  }
+}
+
+/* -- 944/16 = 59em (Tablets) */
+
+@media (width <= 59em) {
+  /* -- General */
+
+  html {
+    font-size: 50%;
+  }
+
+  /* -- Header */
+
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .main-nav {
+    /* -- display: none - NOT transitions at all */
+
+    /*
+    -- 1) Hide it visually - opacity 0
+    -- 2) Make it unaccessible to mouse and keyboard - pointer-events: none;
+    -- 3) Hide it from screen readers - visibility: hidden
+    */
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    visibility: hidden;
+    background-color: rgb(255, 255, 255, 0.97);
+    opacity: 0;
+
+    /* -- Default transition curve - linear */
+    transition: all 0.5s ease-out;
+    transform: translateX(100%);
+  }
+
+  .nav-open .main-nav {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+    align-items: stretch;
+  }
+
+  .main-nav-link:link[class="main-nav-link"],
+  .main-nav-link:visited[class="main-nav-link"] {
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 9px;
+  }
+
+  .main-nav-link.nav-cta:link,
+  .main-nav-link.nav-cta:visited {
+    font-size: 3rem;
+  }
+
+  .list {
+    gap: 1.2rem;
+  }
+
+  /* -- Section Hero */
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 6.4rem;
+    padding: 0 8rem;
+  }
+
+  .hero-text-box,
+  .hero-img-box {
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+
+  .delivered-meals {
+    justify-content: center;
+    margin-top: 3.2rem !important;
+  }
+
+  /* -- Section Featured */
+
+  .featured-logo {
+    height: 2.4rem;
+  }
+
+  /* -- Section How it Works */
+
+  .step-number {
+    font-size: 7.4rem;
+  }
+
+  /* -- Section Meals */
+
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem;
+  }
+
+  /* -- Section Testimonials */
+
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-wrapper {
+    padding: 6.4rem 3.2rem;
+  }
+
+  .testimonials {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3.2rem;
+    column-gap: 4.8rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  /* -- Section Pricing */
+
+  .pricing-plan {
+    width: 100%;
+  }
+
+  .pricing-plan--complete::after {
+    right: -9%;
+  }
+
+  /* -- Section CTA */
+
+  .cta {
+    /* 3/5 = 60% + 40% */
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+
+  .btn--form {
+    margin-top: 2.4rem;
+  }
+}
+
+/* -- 784/16 = 49em (Small tablets) */
+@media (width <= 49em) {
+  /* -- General */
+
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .title-h2 {
+    margin-bottom: 4.8rem;
+  }
+
+  /* -- Section Featured-In */
+
+  .featured-logos {
+    flex-flow: row wrap;
+    gap: 1.6rem;
+  }
+
+  /* -- Section Meals */
+
+  .diets {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  /* -- Section Pricing */
+
+  .pricing-plan {
+    padding: 3.2rem;
+  }
+
+  .pricing-plan--complete::after {
+    top: 5%;
+    right: -13%;
+  }
+
+  /* -- Footer */
+
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+}
+
+/* -- 544/16 = 34em (Phones) */
+@media (width <= 34em) {
+  /* -- General */
+
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .grid:not(:last-child) {
+    margin-bottom: 6.4rem;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+  /* -- Section Hero */
+
+  .section-hero {
+    padding: 2.4rem 0 6.4rem;
+  }
+
+  .hero {
+    padding: 0 3.2rem;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  /* -- Section Featured-In */
+
+  .featured-logo {
+    gap: 1.2rem;
+    height: 1.4rem;
+  }
+
+  /* -- Section Meals */
+
+  .delivered-meals {
+    flex-wrap: wrap;
+  }
+
+  /* -- Section How it Works */
+
+  .section-how,
+  .section-meals,
+  .section-pricing {
+    padding: 6.4rem 0;
+  }
+
+  .step-img-box {
+    margin-top: -2.4rem;
+  }
+
+  .step-img-box:nth-child(2) {
+    grid-row: 4;
+  }
+
+  /* -- Section Meals */
+
+  .meal {
+    justify-self: center;
+    width: 75%;
+  }
+
+  /* -- Section Testimonials */
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+
+  /* -- Section Pricing */
+
+  .pricing-plan {
+    justify-self: center;
+    width: 75%;
+  }
+
+  .feature {
+    justify-self: center;
+    width: 75%;
+    padding: 2.4rem;
+    border: 2px solid #fae5d3;
+    border-radius: 9px;
+    box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.06);
+  }
+
+  /* -- Section CTA */
+
+  .section-cta {
+    padding: 4.8rem 0 9.6rem;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-text-box {
+    padding: 3.2rem;
+  }
+
+  .cta-img-box {
+    grid-row: 1;
+    height: 32rem;
+    background-position: 0 30%;
+  }
+
+  /* -- Footer */
+
+  .footer {
+    padding: 9.6rem 0;
+  }
+}
+
+/* -- 384/16 = 24em (Small phones) */
+
+@media (width <= 24em) {
+  /* -- General */
+
+  .title-h1 {
+    font-size: 4rem;
+  }
+
+  .title-h2 {
+    font-size: 3.2rem;
+  }
+
+  .grid {
+    column-gap: 2.4rem;
+  }
+
+  /* -- Change width for small phones */
+
+  .hero-img,
+  .feature,
+  .pricing-plan,
+  .meal {
+    width: 100%;
+  }
+
+  .btn--full,
+  .btn--outline {
+    width: 100%;
+  }
+
+  /* -- Override helper class (used once) */
+
+  .margin-right-sm {
+    margin-right: 0 !important;
+    margin-bottom: 2.4rem !important;
+  }
+}
