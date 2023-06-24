@@ -5,6 +5,18 @@
 
     <!-- Always include this line of code -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It`s tailored to your personal tastes and nutritional needs."
+    />
+
+    <link
+      rel="shortcut icon"
+      href="./img/glob/png/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="apple-touch-icon" href="./img/glob/png/apple-touch-icon.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,7 +34,7 @@
     ></script>
     <script defer src="./js/script.js"></script>
 
-    <title>Omnifood</title>
+    <title>Omnifood &mdash; Never cook again!</title>
   </head>
   <body class="sticky-nav">
     <header class="header">
@@ -54,7 +66,7 @@
         </picture>
       </a>
 
-      <button class="btn-mobile-nav">
+      <button class="btn-mobile-nav" aria-label="Mobile navigation">
         <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
         <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
       </button>
@@ -401,6 +413,7 @@
                 "
                 alt="iPhone app preferences selection screen"
                 class="step-img"
+                loading="lazy"
               />
             </picture>
           </div>
@@ -431,6 +444,7 @@
                 "
                 alt="iPhone app meal approving plan screen"
                 class="step-img"
+                loading="lazy"
               />
             </picture>
           </div>
@@ -481,6 +495,7 @@
                 "
                 alt="iPhone app delivery screen"
                 class="step-img"
+                loading="lazy"
               />
             </picture>
           </div>
@@ -518,6 +533,7 @@
                 "
                 alt="Japanese Gyozas"
                 class="meal-img"
+                loading="lazy"
               />
             </picture>
 
@@ -570,6 +586,7 @@
                 "
                 alt="Avocado Salad"
                 class="meal-img"
+                loading="lazy"
               />
             </picture>
             <div class="meal-content">
@@ -675,6 +692,7 @@
                   "
                   alt="Photo of customer Dave Bryson"
                   class="testimonial-img"
+                  loading="lazy"
                 />
               </picture>
               <blockquote class="testimonial-text">
@@ -708,6 +726,7 @@
                   "
                   alt="Photo of customer Ben Hadley"
                   class="testimonial-img"
+                  loading="lazy"
                 />
               </picture>
               <blockquote class="testimonial-text">
@@ -741,6 +760,7 @@
                   "
                   alt="Photo of customer Steve Miller"
                   class="testimonial-img"
+                  loading="lazy"
                 />
               </picture>
               <blockquote class="testimonial-text">
@@ -774,6 +794,7 @@
                   "
                   alt="Photo of customer Hannah Smith"
                   class="testimonial-img"
+                  loading="lazy"
                 />
               </picture>
               <blockquote class="testimonial-text">
@@ -809,6 +830,7 @@
                 "
                 alt="Photo of beautifully arranged food"
                 class="gallery-img"
+                loading="lazy"
               />
             </picture>
             <!-- <figcaption>Caption</figcaption> -->
@@ -837,6 +859,7 @@
                 "
                 alt="Photo of beautifully arranged food"
                 class="gallery-img"
+                loading="lazy"
               />
             </picture>
           </figure>
@@ -864,6 +887,7 @@
                 "
                 alt="Photo of beautifully arranged food"
                 class="gallery-img"
+                loading="lazy"
               />
             </picture>
           </figure>
@@ -891,6 +915,7 @@
                 "
                 alt="Photo of beautifully arranged food"
                 class="gallery-img"
+                loading="lazy"
               />
             </picture>
           </figure>
@@ -918,6 +943,7 @@
                 "
                 alt="Photo of beautifully arranged food"
                 class="gallery-img"
+                loading="lazy"
               />
             </picture>
           </figure>
@@ -945,6 +971,7 @@
                 "
                 alt="Photo of beautifully arranged food"
                 class="gallery-img"
+                loading="lazy"
               />
             </picture>
           </figure>
@@ -972,6 +999,7 @@
                 "
                 alt="Photo of beautifully arranged food"
                 class="gallery-img"
+                loading="lazy"
               />
             </picture>
           </figure>
@@ -999,6 +1027,7 @@
                 "
                 alt="Photo of beautifully arranged food"
                 class="gallery-img"
+                loading="lazy"
               />
             </picture>
           </figure>
@@ -1026,6 +1055,7 @@
                 "
                 alt="Photo of beautifully arranged food"
                 class="gallery-img"
+                loading="lazy"
               />
             </picture>
           </figure>
@@ -1053,6 +1083,7 @@
                 "
                 alt="Photo of beautifully arranged food"
                 class="gallery-img"
+                loading="lazy"
               />
             </picture>
           </figure>
@@ -1080,6 +1111,7 @@
                 "
                 alt="Photo of beautifully arranged food"
                 class="gallery-img"
+                loading="lazy"
               />
             </picture>
           </figure>
@@ -1107,6 +1139,7 @@
                 "
                 alt="Photo of beautifully arranged food"
                 class="gallery-img"
+                loading="lazy"
               />
             </picture>
           </figure>
@@ -1315,17 +1348,29 @@
 
           <ul class="social-links">
             <li>
-              <a class="footer-link" href="#">
+              <a
+                class="footer-link"
+                href="#"
+                aria-label="Our Instagram page link"
+              >
                 <ion-icon class="social-icon" name="logo-instagram"></ion-icon>
               </a>
             </li>
             <li>
-              <a class="footer-link" href="#">
+              <a
+                class="footer-link"
+                href="#"
+                aria-label="Our Facebook page link"
+              >
                 <ion-icon class="social-icon" name="logo-facebook"></ion-icon>
               </a>
             </li>
             <li>
-              <a class="footer-link" href="#">
+              <a
+                class="footer-link"
+                href="#"
+                aria-label="Our Twitter page link"
+              >
                 <ion-icon class="social-icon" name="logo-twitter"></ion-icon>
               </a>
             </li>

@@ -113,6 +113,7 @@
 
 .hero-img {
   width: 100%;
+  height: auto;
 }
 
 .delivered-meals {
@@ -214,6 +215,7 @@
 
 .step-img {
   width: 35%;
+  height: auto;
 }
 
 /* -- Section Featured-In */
@@ -238,6 +240,7 @@
 }
 
 .featured-logo {
+  width: auto;
   height: 3.2rem;
   filter: brightness(0);
   opacity: 0.5;
@@ -295,6 +298,7 @@
 
 .meal-img {
   width: 100%;
+  height: auto;
 }
 
 .meal-name {
