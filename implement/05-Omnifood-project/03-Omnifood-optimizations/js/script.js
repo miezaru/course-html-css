@@ -39,6 +39,27 @@ allLinks.forEach(function (link) {
   })
 })
 
+// Sticky navigation
+const sectionHeroEl = document.querySelector('.section-hero')
+
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0]
+    if (!ent.isIntersecting) {
+      document.body.classList.add('sticky-nav')
+    }
+    if (ent.isIntersecting) {
+      document.body.classList.remove('sticky-nav')
+    }
+  },
+  {
+    root: null, // observe inside of viewport
+    threshold: 0, // as soon as 0% section on a viewport
+    rootMargin: '-80px',
+  }
+)
+obs.observe(sectionHeroEl)
+
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
   var flex = document.createElement('div')
