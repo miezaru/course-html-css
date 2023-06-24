@@ -133,7 +133,7 @@
   border-radius: 50%;
 }
 
-.delivered-imgs img:last-child {
+.delivered-imgs picture:last-child img {
   margin-right: 0;
 }
 
@@ -176,6 +176,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.step-img-box picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .step-img-box::after,
@@ -573,7 +580,14 @@
       rgba(235, 152, 78, 0.35),
       rgba(230, 126, 34, 0.35)
     ),
-    url("../img/eating.jpg");
+    image-set(
+      url("../img/glob/avif/eating-2x.avif") type("image/avif") 2x,
+      url("../img/glob/avif/eating-1x.avif") type("image/avif") 1x,
+      url("../img/glob/webp/eating-2x.webp") type("image/webp") 2x,
+      url("../img/glob/webp/eating-2x.webp") type("image/webp") 1x,
+      url("../img/glob/jpg/eating-2x.jpg") 2x,
+      url("../img/glob/jpg/eating-1x.jpg") 1x
+    );
   background-position: center;
   background-size: cover;
 }
