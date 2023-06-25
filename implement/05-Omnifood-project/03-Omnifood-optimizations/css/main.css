@@ -396,7 +396,7 @@
 /* -- Section Pricing */
 
 .section-pricing {
-  padding: 9.6rem 0;
+  padding: 9.6rem 0 4.8rem;
 }
 
 .pricing-plan {
@@ -504,7 +504,7 @@
 /* -- Section Pricing */
 
 .section-cta {
-  padding: 4.8rem 0 12.8rem;
+  padding: 9.6rem 0 12.8rem;
 }
 
 .cta {
