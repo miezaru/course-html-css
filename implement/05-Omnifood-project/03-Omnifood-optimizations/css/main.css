@@ -357,6 +357,7 @@
 
 .testimonial-img {
   width: 6.4rem;
+  height: auto;
   margin-bottom: 1.2rem;
   border-radius: 50%;
 }
@@ -386,6 +387,7 @@
 .gallery-img {
   display: block;
   width: 100%;
+  height: auto;
   transition: all 0.4s;
 }
 
