@@ -6,7 +6,7 @@ Repository created for tracking completed training sections of the course "Build
 
 Сourse author: [Jonas Schmedtmann](https://www.udemy.com/user/jonasschmedtmann/)
 
-Course student: [Artem Usatyi](https://github.com/miezaruexpr)
+Course student: [Artem Usatyi](https://github.com/miezaru)
 
 ## Additional links
 
